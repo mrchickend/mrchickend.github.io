@@ -1,16 +1,16 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://mrchickend.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+    <meta name="description" content="一只蒟蒻的博客" />
     <link rel="stylesheet" href="https://mrchickend.github.io/styles/main.css">
-    <link rel="stylesheet" href="https://mrchickend.github.io/media/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>MrChickenD's Blog</title>
 </head>
-
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
@@ -632,8 +632,7 @@
         }
     </script>
     </div>
-                
-                    <div class="mobilebar"><head>
+                <div class="tbar"> <head>
   <!-- 引入Bootstrap核心样式文件 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
 </head>
@@ -761,67 +760,154 @@
         btstate = false;
       }
     }
-  </script> </div>
-                        <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 topindex">
-                            <script>
-                                $(".tag").each(function () {
-                                    var rgb = '#' + Math.floor((Math.random()) * 0xffffff).toString(16);;
-                                    $(this).css('color', rgb);
-                                });
-                            </script>
-                            <div class="tagsbackgroundtop"></div>
-                            <div class="tags-container">
-                                
-                                <img class="tagsimg" src="" alt="">
-                                
+  </script> 
+                    <div style="margin-top:60px"></div>
+                </div>
+                
+                <div class="col-lg-3"></div>
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12  col-lg-6 top" style="z-index: 11;">
+                    <div id="talks">
+    <div id="talkContainer">
+    </div>
+    <button id="getmorebt" type="button" onclick="add()">获取更多</button>
+</div>
+<!-- 弹窗 -->
+<div id="myModal" class="modal">
+    <img class="modal-content" id="img01">
+</div>
+                    <div style="display: none;">
                         
-                            </div>
-                            <div style="display: none;">
-                                
-                            </div>
-                        </div>
-                        
-                <div class="col-xs-6 col-sm-3"></div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-lg-1"></div>
+                
             </div>
             
-        </div></div>
+        </div>
         <div id="bg">
         </div>
         <div id="bgchoice" style="display: none">
-                    </div>
-                    
-                    <div id="bgurl" style="display:none"></div>
-                       
+            </div>
+            
+            <div id="bgurl" style="display:none"></div>
+               
     </div>
-
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://mrchickend.github.io
-                </div>
+    
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://mrchickend.github.io</div>
 </body>
 
 </html>
+        
 <script>
-    $(".tag").each(function () {
-        var rgb = '#' + Math.floor((Math.random()) * 0xffffff).toString(16);;
-        $(this).css('color', rgb);
-    });
+        var bgchoice=$('#bgchoice').html();
+        var bg = $('#bg');
+        var bgurl = document.getElementById("bgurl").innerHTML;
+        if(bgchoice=='default')
+            for (var i = 0; i < 3; i++)
+                bgurl = bgurl.replace("\\", "/");
+        bg.css("background", "url('" + bgurl + "')");
 </script>
 
 
-
 <script>
-    var bgchoice = $('#bgchoice').html();
-    var bg = $('#bg');
-    var bgurl = document.getElementById("bgurl").innerHTML;
-    if (bgchoice == 'default')
-        for (var i = 0; i < 3; i++)
-            bgurl = bgurl.replace("\\", "/");
-    bg.css("background", "url('" + bgurl + "')");
+    var talksall = [];
+    var talks = [];
+    var talkindex;
 
-    window.onload = function () {
+    get();
+    add();
+
+    function get() {
+        var t = JSON.parse('');
+        talkindex = t.length - 1;
+        for (var i = 0; i <=t.length - 1; i++) {
+            var d = {};
+            d["time"] = t[i].time;
+            d["author"] = t[i].author;
+            d["text"] = t[i].text;
+            d["img"] = t[i].img;
+            talksall.push(d);
+        }
+    }
+
+    function add() {
+        for (var i = talkindex; i >= 0 && i > talkindex - 3; i--) {
+            talks.push(talksall[i]);
+        }
+        talkindex = (talkindex - 3) >= 0 ? (talkindex - 3) : -1;
+        if (talkindex < 0) $("#getmorebt").hide();
+        show();
+        refreshImg("talkimg");
+    }
+
+    function show() {
+        var talkT = document.getElementById("talkContainer");
+        talkT.innerHTML = "";
+        for (var i = 0; i < talks.length; i++) {
+            if (talks[i].img != '') {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <img src="' + talks[i].img + '" class="talkimg"> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <img class="intro1" src="https://mrchickend.github.io/images/avatar.png?v=1609494379559">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            } else {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <img class="intro1" src="https://mrchickend.github.io/images/avatar.png?v=1609494379559">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            }
+        }
+    }
+
+    function refreshImg(imgclass) {
+        // 获取弹窗
+        var modal = document.getElementById('myModal');
+
+        // 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
+        var img = document.getElementsByClassName(imgclass);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        for (var i in img) {
+            img[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+    
+        // 图片关闭
+        var modalImg = document.getElementById('img01');
+        // 鼠标点击模型外区域关闭登录框
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == social) {
+                social.style.display = "none";
+            }
+        }
+    }
+
+    window.onload = function(){
         aplayerbtnInit();
     }
 </script>
