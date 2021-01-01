@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrchickend.github.io</id>
     <title>MrChickenD&apos;s Blog</title>
-    <updated>2021-01-01T13:01:26.772Z</updated>
+    <updated>2021-01-01T18:29:55.623Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrchickend.github.io"/>
     <link rel="self" href="https://mrchickend.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://mrchickend.github.io/images/avatar.png</logo>
     <icon>https://mrchickend.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MrChickenD&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[2020总结]]></title>
+        <id>https://mrchickend.github.io/post/2020-zong-jie/</id>
+        <link href="https://mrchickend.github.io/post/2020-zong-jie/">
+        </link>
+        <updated>2021-01-01T15:27:02.000Z</updated>
+        <content type="html"><![CDATA[<p>活这么多年就没过过这么离谱的年</p>
+<h1 id="timeline">Timeline</h1>
+<h2 id="jan-to-apr">Jan. to Apr.</h2>
+<p>疫情下上网课学(mo)习(xi) 太好了，什么都没学到.jpg<br>
+在家里也没有体育锻炼，导致中考体育47分，还好没考长跑，不然分可能还没这么高</p>
+<h2 id="may">May.</h2>
+<p>回归学校行课，按部就班复习<br>
+还是不太想学物理和语文呢</p>
+<h2 id="jun">Jun.</h2>
+<p>考了双流区小中考(适应性考试)，想填指标上双中，被bcj和zm阻止了<br>
+中考延期一个月，好烦</p>
+<h2 id="jul-to-aug">Jul. to Aug.</h2>
+<p>毕业典礼，终于和某人有合影了<br>
+中考结束，也就那样吧，除了英语拉胯，其他正常发挥<br>
+漫长的没有作业的假期开始了<br>
+开学之前破了个国服</p>
+<h2 id="sep">Sep.</h2>
+<p>开学<br>
+遇到个脑残班主任，不让进社团<br>
+高中好难</p>
+<h2 id="oct">Oct.</h2>
+<p>入坑明日方舟<br>
+八天国庆抽了四天竞赛，暴风哭泣<br>
+CSP-S2020初赛，79分，全省前100来着(蒙的一手好题)</p>
+<h2 id="nov">Nov.</h2>
+<p>CSP-S2020复赛，爆零，蒟蒻的身份暴露了！<br>
+<strong>NEKOPARA4 YYDS</strong></p>
+<h2 id="dec">Dec.</h2>
+<p>快乐咸鱼<br>
+报名成都早安赛</p>
+<h1 id="总结">总结</h1>
+<p>又是废物的一年<br>
+去年立下的一堆目标，实现的只有三速sub10，我是废物<br>
+上了高中之后甚至考的远远不如初中，希望今年能硬起来吧，少玩点游戏多做点作业</p>
+<h1 id="目标">目标</h1>
+<p>三速avg10 三单avg20 二速avg5 四速avg60<br>
+学会bld！！！！！！！<br>
+年级前十</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSP-S 2020 游记]]></title>
         <id>https://mrchickend.github.io/post/csp-s-2020-you-ji/</id>
