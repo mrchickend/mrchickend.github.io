@@ -1,23 +1,22 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://mrchickend.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <meta name="description" content="一只蒟蒻的博客" />
-    <link rel="stylesheet" href="https://mrchickend.github.io/styles/main.css">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>MrChickenD's Blog</title>
-</head>
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://mrchickend.github.io/media/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+<link rel="stylesheet" href="https://mrchickend.github.io/styles/main.css">
+<link rel="stylesheet" href="https://mrchickend.github.io/media/css/font-awesome.css">
+<title>MrChickenD's Blog</title>
+
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
     <div id="content">
         <div class="nav-large">
             <div class="row">
-                <div class="side"><head>
+                
+                    <div class="side"><head>
     <link rel="stylesheet" href="https://mrchickend.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://mrchickend.github.io/styles/main.css">
     
@@ -637,7 +636,7 @@
         }
     </script>
     </div>
-                <div class="tbar"> <head>
+                    <div class="mobilebar"><head>
   <!-- 引入Bootstrap核心样式文件 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/bootstrap.min.css">
 </head>
@@ -765,154 +764,133 @@
         btstate = false;
       }
     }
-  </script> 
-                    <div style="margin-top:60px"></div>
-                </div>
+  </script> </div>
+                        <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 topindex">
+                            <link rel="stylesheet" href="https://mrchickend.github.io/media/css/font-awesome.css">
+<div class="tag-container">
+    
+    <div class="postshow">
+        
+        <a data-pjax href="https://mrchickend.github.io/post/2019-zong-jie/">
+            <div id="post" style="width:100%">
                 
-                <div class="col-lg-3"></div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12  col-lg-6 top" style="z-index: 11;">
-                    <div id="talks">
-    <div id="talkContainer">
+                <img src="" class="postimage">
+                
+        <div class="posttitlebox">
+            <div class="posttitle">
+                2019总结
+            </div>
     </div>
-    <button id="getmorebt" type="button" onclick="add()">获取更多</button>
 </div>
-<!-- 弹窗 -->
-<div id="myModal" class="modal">
-    <img class="modal-content" id="img01">
+</a>
+<div class="postinfo">
+    <div class="postdate"><i class="fa fa-calendar"></i>2020-03-12</div>
+    <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+    <div class="posttag">
+        
+        <a data-pjax href="https://mrchickend.github.io/tag/AoOMN5Spg/" class="postlink">
+            <i class="fa fa-tag"></i> 杂文
+        </a>
+        
+    </div>
 </div>
-                    <div style="display: none;">
+
+</div>
+
+</div>
+                            <div>
+                                <div class="pcpagi">
+    <div class="pagi">
+        <ul>
+            
+            <li><a style="width:100px">&nbsp;</a></li>
+            
+                    <li><a id="page1">1</a></li>
+                    <li><a id="page2" class="active">2</a></li>
+                    <li><a id="page3">3</a></li>
+                    
+            <li><a style="width:100px">&nbsp;</a></li>
+            
+                </ul>
+    </div>
+</div>
+
+<div id="pagination-prev" style="display:none"> 
+</div>
+<div id="pagination-next" style="display:none"> </div>
+
+<div class="pagination-container">
+      
+    
+</div>
+
+<script>
+    var prevstr = document.getElementById("pagination-prev").innerHTML;
+    var nextstr = document.getElementById("pagination-next").innerHTML;
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+    var page3 = document.getElementById("page3");
+    page1.innerHTML = '-';
+    page2.innerHTML = '1';
+    page3.innerHTML = '-';
+    if (prevstr.length > 5) {
+        if (prevstr.indexOf("page/") != -1) {
+            var prevnum = parseInt(prevstr.split("page/")[1]);
+            page1.innerHTML = prevnum;
+            page2.innerHTML = prevnum + 1;
+        } else {
+            page1.innerHTML = 1;
+            page2.innerHTML = 2;
+        }
+    }
+    if (nextstr.indexOf("page/") != -1) {
+        var nextnum = parseInt(nextstr.split("page/")[1]);
+        page3.innerHTML = nextnum;
+        page2.innerHTML = nextnum - 1;
+    }
+</script>
+                                <div style="padding-bottom:10%"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xs-6"></div>
                         
-                    </div>
-                </div>
-                <div class="col-md-1 col-lg-1"></div>
-                
             </div>
             
         </div>
         <div id="bg">
         </div>
         <div id="bgchoice" style="display: none">
+                    </div>
+                    
+                    <div id="bgurl" style="display:none"></div>
+                       
             </div>
-            
-            <div id="bgurl" style="display:none"></div>
-               
-    </div>
-    
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
-    <div id="domainname" style="display:none">https://mrchickend.github.io</div>
+</div>
+</div>
+
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+        </div>
+        <div id="domainname" style="display:none">https://mrchickend.github.io
+                </div>
 </body>
 
 </html>
-        
-<script>
-        var bgchoice=$('#bgchoice').html();
-        var bg = $('#bg');
-        var bgurl = document.getElementById("bgurl").innerHTML;
-        if(bgchoice=='default')
-            for (var i = 0; i < 3; i++)
-                bgurl = bgurl.replace("\\", "/");
-        bg.css("background", "url('" + bgurl + "')");
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 
 
 <script>
-    var talksall = [];
-    var talks = [];
-    var talkindex;
+    var bgchoice = $('#bgchoice').html();
+    var bg = $('#bg');
+    var bgurl = document.getElementById("bgurl").innerHTML;
+    if (bgchoice == 'default')
+        for (var i = 0; i < 3; i++)
+            bgurl = bgurl.replace("\\", "/");
+    bg.css("background", "url('" + bgurl + "')");
 
-    get();
-    add();
-
-    function get() {
-        var t = JSON.parse('');
-        talkindex = t.length - 1;
-        for (var i = 0; i <=t.length - 1; i++) {
-            var d = {};
-            d["time"] = t[i].time;
-            d["author"] = t[i].author;
-            d["text"] = t[i].text;
-            d["img"] = t[i].img;
-            talksall.push(d);
-        }
-    }
-
-    function add() {
-        for (var i = talkindex; i >= 0 && i > talkindex - 3; i--) {
-            talks.push(talksall[i]);
-        }
-        talkindex = (talkindex - 3) >= 0 ? (talkindex - 3) : -1;
-        if (talkindex < 0) $("#getmorebt").hide();
-        show();
-        refreshImg("talkimg");
-    }
-
-    function show() {
-        var talkT = document.getElementById("talkContainer");
-        talkT.innerHTML = "";
-        for (var i = 0; i < talks.length; i++) {
-            if (talks[i].img != '') {
-                talkT.innerHTML += '\
-            <div class="talk" v-for="t in talks"> \
-                <img src="' + talks[i].img + '" class="talkimg"> \
-                <div class="ainfo">\
-                    <div class="ainfo-intro">\
-                        <img class="intro1" src="https://mrchickend.github.io/images/avatar.png?v=1609494898518">\
-                        <div class="author">' + talks[i].author + '</div>·\
-                        <div class="time">' + talks[i].time + '</div>\
-                    </div>\
-                </div>\
-                <div class="talkcontent">' + talks[i].text + '\
-                </div\>\
-            ';
-            } else {
-                talkT.innerHTML += '\
-            <div class="talk" v-for="t in talks"> \
-                <div class="ainfo">\
-                    <div class="ainfo-intro">\
-                        <img class="intro1" src="https://mrchickend.github.io/images/avatar.png?v=1609494898518">\
-                        <div class="author">' + talks[i].author + '</div>·\
-                        <div class="time">' + talks[i].time + '</div>\
-                    </div>\
-                </div>\
-                <div class="talkcontent">' + talks[i].text + '\
-                </div\>\
-            ';
-            }
-        }
-    }
-
-    function refreshImg(imgclass) {
-        // 获取弹窗
-        var modal = document.getElementById('myModal');
-
-        // 获取图片插入到弹窗 - 使用 "alt" 属性作为文本部分的内容
-        var img = document.getElementsByClassName(imgclass);
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        for (var i in img) {
-            img[i].onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        }
-    
-        // 图片关闭
-        var modalImg = document.getElementById('img01');
-        // 鼠标点击模型外区域关闭登录框
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            if (event.target == social) {
-                social.style.display = "none";
-            }
-        }
-    }
-
-    window.onload = function(){
+    window.onload = function () {
         aplayerbtnInit();
     }
 </script>

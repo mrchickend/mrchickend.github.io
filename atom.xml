@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrchickend.github.io</id>
     <title>MrChickenD&apos;s Blog</title>
-    <updated>2021-01-01T09:47:30.238Z</updated>
+    <updated>2021-01-01T09:55:17.670Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrchickend.github.io"/>
     <link rel="self" href="https://mrchickend.github.io/atom.xml"/>
@@ -10,4 +10,34 @@
     <logo>https://mrchickend.github.io/images/avatar.png</logo>
     <icon>https://mrchickend.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MrChickenD&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[2019总结]]></title>
+        <id>https://mrchickend.github.io/post/2019-zong-jie/</id>
+        <link href="https://mrchickend.github.io/post/2019-zong-jie/">
+        </link>
+        <updated>2020-03-12T04:48:28.000Z</updated>
+        <content type="html"><![CDATA[<p>一直想着要来写一个2019年的总结，但提笔，却不知道该如何下手。</p>
+<p>#总结<br>
+##学习<br>
+算我运气好吧？有幸进入由学校top80组成的班级~~（其实还是为了某人）~~不得不说，不同群体中环境也真的就不同，身边全是各种神犇，衬托得自己像一个农村旮旮角角里来的蒟蒻，被花式吊打。</p>
+<p>11月8号的OI（CPS?），初赛就爆掉。前面的选择题都死在了基础和排列组合上面，后面读程序也没有静下心来，算是一个遗憾了吧。不知道上了高中是选择OI还是MO。</p>
+<p>之前立下雄心壮志要冲一下自招，结果老早前买的竞赛书现在还没有写过一道题。</p>
+<p>##魔方<br>
+很高兴能够顶着逃课参加2019WCA成都冬季赛。</p>
+<p>没有想到的是一个从来没练过二速的菜鸡能够混入复赛。但三单项目就暴露原型了哈哈:)</p>
+<p>洲哥不出所料成为全场焦点，裁判小姐姐爱了爱了。</p>
+<p>（过去一年了还没有背完cfop）</p>
+<p>今年应该就支出了v3em 魔域gts2m valk5m吧</p>
+<p>2019.7.19刷新了自己的pb 10.68s，至今仍未突破，还是我太菜了xd</p>
+<p>##其他<br>
+持续沉迷亡者农药，qq飞车，未曾歇息。</p>
+<p>倒是喜欢看上漫画了</p>
+<p>mc那边也很少玩了，有幸成为TIS内服的一员！</p>
+<p>#目标（大概又是完不成的划水了吧）<br>
+三速sub10</p>
+<p>刷完自招真卷<br>
+<s>拥有一个gf！</s><br>
+新年新征途，愿我与更好的自己相遇！</p>
+]]></content>
+    </entry>
 </feed>
