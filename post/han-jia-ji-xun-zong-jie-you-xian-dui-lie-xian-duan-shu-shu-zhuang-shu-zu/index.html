@@ -1,11 +1,10 @@
 <html>
-
 <head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>友情链接 | Nephrenn&#39;s Blog</title>
+<title>寒假集训总结（优先队列、线段树、树状数组） | Nephrenn&#39;s Blog</title>
 
 <link rel="shortcut icon" href="https://mrchickend.github.io/favicon.ico?v=1620031224893">
 
@@ -34,12 +33,11 @@
 <!--<script src="media/scripts/index.js"></script>-->
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
-
 <body>
 <div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <style>
+    <style>
     /* 导航栏样式 */
     .navbar {
         position: relative;
@@ -208,29 +206,97 @@
         }
     }
 </script>
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    <p>岂可修，我并没有友链</p>
-
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    寒假集训总结（优先队列、线段树、树状数组）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-05-03 ·
+                    </time>
+                    
                 </div>
-                
+                <div class="post-content">
+                    <p>刚考完期末，隔两天就来上竞赛，真有学校的<br>
+简单记录一下学的东西</p>
+<h1 id="优先队列">优先队列</h1>
+<p>优先队列就是拥有First In Largest Out行为特征的一种队列，优先级最高的总是在队首<br>
+比如一个数列：<code>5 7 1 3 9</code>，入队后就是：<code>1 3 5 7 9</code></p>
+<p>STL里有使用二叉堆的优先队列的实现，使用时需包含头文件<code>&lt;priority_queue&gt;</code><br>
+定义方式： <code>priority_queue&lt;Type,Container,Functional&gt;</code><br>
+如果使用<code>priority_queue&lt;Type&gt;</code>定义，则默认是<code>priority_queue&lt;Type,vector&lt;Type&gt;,less&lt;Type&gt; &gt;</code><br>
+同时注意<code>&gt;</code>与<code>&gt;</code>或者<code>&lt;</code>与<code>&lt;</code>之前需要打空格隔开，否则会引起歧义</p>
+<p><code>priority_queue</code>的常用的成员函数如下：</p>
+<ul>
+<li><code>empty()</code>       如果队列为空返回<code>true</code>，反之返回<code>false</code></li>
+<li><code>size()</code>        返回队列中元素个数</li>
+<li><code>top()</code>         返回队首元素的引用形式</li>
+<li><code>pop()</code>         弹出队首元素</li>
+<li><code>push(T&amp;&amp; obj)</code> 将元素obj压入队列<br>
+<a href="http://c.biancheng.net/view/6987.html">详细的可以看</a></li>
+</ul>
+<p>举个实例</p>
+<ul>
+<li><em>[NOIP2004 提高组]</em> 合并果子 <a href="https://www.luogu.com.cn/problem/P1090">洛谷P1090</a><br>
+乍一看这道题以为是石子合并，但石子是有序的一圈，而这道题中的果子是无序的<br>
+因此可以直接使用一个优先队列维护最小的果子的堆的质量，每次取队首两堆果子合并后再压入队列</li>
+</ul>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; c;
+int n,fruit;
+int min1,min2,sum;
+
+int main()
+{
+	scanf(&quot;%d&quot;,&amp;n);
+	for(int i=1;i&lt;=n;++i)
+	{
+		scanf(&quot;%d&quot;,&amp;fruit);
+		c.push(fruit);
+	}
+	
+	while(c.size()&gt;=2)
+	{
+		min1=c.top();
+		c.pop();
+		min2=c.top();
+		c.pop();
+		sum+=(min1+min2);
+		c.push(min1+min2);
+		min1=min2=0;
+	}
+	
+	printf(&quot;%d&quot;,sum);
+	return 0;
+} 
+</code></pre>
+<h2 id="双倍经验福建省夏令营-瑞瑞的木板-洛谷p1334"><s><strong>双倍经验</strong>：<em>[福建省夏令营]</em> 瑞瑞的木板 <a href="https://www.luogu.com.cn/problem/P1334">洛谷P1334</a></s></h2>
+<h1 id="树状数组">树状数组</h1>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mrchickend.github.io/post/2020-zong-jie/" class="post-title gt-a-link">
+                    2020总结
+                </a>
             </div>
+        
 
+        
 
+        
 
-            <div class="site-footer gt-c-content-color-first">
+        
+
+        <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">一只蒟蒻的博客</div>
     <div class="social-container">
         
@@ -260,8 +326,7 @@
   hljs.initHighlightingOnLoad()
 </script>
 
-        </div>
     </div>
+</div>
 </body>
-
 </html>
