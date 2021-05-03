@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrchickend.github.io</id>
     <title>Nephrenn&apos;s Blog</title>
-    <updated>2021-05-03T11:08:45.784Z</updated>
+    <updated>2021-05-03T17:01:52.613Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrchickend.github.io"/>
     <link rel="self" href="https://mrchickend.github.io/atom.xml"/>
@@ -16,13 +16,6 @@
         <link href="https://mrchickend.github.io/post/han-jia-ji-xun-zong-jie-you-xian-dui-lie-xian-duan-shu-shu-zhuang-shu-zu/">
         </link>
         <updated>2021-05-03T08:17:48.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020总结]]></title>
-        <id>https://mrchickend.github.io/post/2020-zong-jie/</id>
-        <link href="https://mrchickend.github.io/post/2020-zong-jie/">
-        </link>
-        <updated>2021-01-01T15:27:02.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[CSP-S 2020 游记]]></title>
@@ -44,12 +37,5 @@
         <link href="https://mrchickend.github.io/post/zhi-jiao-san-jiao-xing-zhong-san-bian-de-mi-de-guan-xi/">
         </link>
         <updated>2020-10-31T09:22:51.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2019总结]]></title>
-        <id>https://mrchickend.github.io/post/2019-zong-jie/</id>
-        <link href="https://mrchickend.github.io/post/2019-zong-jie/">
-        </link>
-        <updated>2020-03-12T04:48:28.000Z</updated>
     </entry>
 </feed>
