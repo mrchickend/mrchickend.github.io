@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrchickend.github.io</id>
     <title>MrChickenD&apos;s Blog</title>
-    <updated>2021-04-30T13:26:32.782Z</updated>
+    <updated>2021-05-03T05:21:12.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrchickend.github.io"/>
     <link rel="self" href="https://mrchickend.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://mrchickend.github.io/images/avatar.png</logo>
     <icon>https://mrchickend.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MrChickenD&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[1]]></title>
+        <id>https://mrchickend.github.io/post/1/</id>
+        <link href="https://mrchickend.github.io/post/1/">
+        </link>
+        <updated>2021-05-03T05:20:43.000Z</updated>
+        <content type="html"><![CDATA[<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>sin</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">\sin</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66786em;vertical-align:0em;"></span><span class="mop">sin</span></span></span></span></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020总结]]></title>
         <id>https://mrchickend.github.io/post/2020-zong-jie/</id>
